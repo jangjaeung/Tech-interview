@@ -95,3 +95,30 @@
 + **동기?비동기?**
   + 동기 방식은 서버에서 요청을 보냈을 때 응답이 돌아와야 다음 동작을 수행할 수 있다. 즉 A작업이 모두 진행 될때까지 B작업은 대기해야한다.
   + 비동기 방식은 반대로 요청을 보냈을 때 응답 상태와 상관없이 다음 동작을 수행 할 수 있다. 즉 A작업이 시작하면 동시에 B작업이 실행된다. A작업은 결과값이 나오는대로 출력된다.
+## SQL
++ **DDL?**
+  + Data Definition Language 데이터정의어
+  + 데이터베이스의 구조를 정의하거나 변경, 삭제 하기 위해 사용하는 언어
+  + 주로 DB 관리자 또는 설계자가 사용함(DA & DBA)
+  + CREATE(개체 생성), ALTER(개체 수정), DROP(개체 삭제), TRUNCATE(개체 초기화)
+  + CREATE USER 계정이름 IDENTIFIED BY 계정비밀번호; --사용자만들기
+  + GRANT CONNECT TO 계정이름; —연결권한부여(DCL)
+  + GRANT RESOURCE TO 계정이름; —데이터 조작 권한 부여(DCL)
+  + CREATE TABLE 테이블명 (칼럼명 자료명(크기),칼람명 자료형(크기),...);
++ **DML??**
+  + Data Manipulation Language 데이터 조작어
+  + Data를 조작하기 위해 사용하는 언어
+  + Data의 삽입, 수정, 삭제, 조회 등의 동작을 제어함
+  + Data를 이용하려는 사용자와 시스템간의 인터페이스를 직접적으로 제공 하는 언어
+  + INSERT(데이터 삽입), UPDATE(데이터 수정), DELETE (데이터 삭제)
+  + DQL (Data Query Language)
+  + 데이터를 검색(추출)하기 위해 사용되는 언어
+  + SELECT (데이터 검색)
++ **DCL??**
+  + Data Control Language 데이터 제어어
+  + 사용자의 권한, 관리자 설정등을 처리
+  + GRANT(유저 권한 생성), REVOKE(유저 권한 삭제)
++ **TCL??**
+  + Transaction Control Language 트랜 잭션 관리 처리 언어
+  + COMMIT(트랜잭션 종료처리후 저장)
+  + ROLLBACK(트랜잭션 취소), SAVEPOINT(임시저장)
