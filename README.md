@@ -146,3 +146,16 @@
   + 라이프 사이클, 쿠키도 만료시간이 있지만 파일로 저장되기 때문에 브라우저를 종료해도 계속해서 정보가 남아 있을 수 있다. 또한 만료기간을 넉넉하게 잡아두면 쿠키삭제를 할 때 까지 유지될 수도 있다.
   + 반면에 세션도 만료시간을 정할 수 있지만 브라우저가 종료되면 만료시간에 상관없이 삭제됨. 예를 들어, 크롬에서 다른 탭을 사용해도 세션을 공유. 다른 브라우저를 사용하게 되면 다른 세션을 사용할 수 있다.
   + 속도, 쿠키에 정보가 있기 때문에 서버에 요청시 속도가 빠르고 세션은 정보가 서버에 있기 때문에 처리가 요구되어 비교적 느린 속도를 가짐
++ **javascript 작동 순서**
+  + **동기 방식 이벤트 처리 동작**
+  + JS(javascript)엔진이 javascript 코드 순차 적으로 실행
+  + code 실행 중 함수 발결 시 call stack에 넣기
+  + call stack에 넣은 함수를 실행
+  + call stack에서 실행된 함수를 call stack에 제거 
+  + **비동기 방식 이벤트 처리 동작**
+  + JS(javascript)엔진이 javascript 코드 순차 적으로  실행
+  + code 실행 중 비동기 이벤트 발견시 이벤트 함수를 call stack에 넣기
+  + 비동기 이벤트 함수의 Event handler를 Event Queue 에 넣기
+  + call stack이 비어 있을 경우 Event Queue에서 Event handler 하나를 꺼내서 call stack에 넣기
+  + call stack에 넣은 함수를 실행
+  + call stack 함수 제거
